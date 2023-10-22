@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <script src="/js/script.js"></script>
+  <title>Anime-Shop</title>
+</head>
+<body>
+    <header>
+      <div class="logo">
+          <img src="/recursos/logo.png" alt="Logo da empresa">
+      </div>
+      <div class="texto-bem-vindo">
+          <p>Seja bem-vindo!</p>
+      </div>
+      <nav>
+        <img src="/recursos/menu-icon.png" alt="">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Registre</a></li>
+            <li><a href="#">Minha conta</a></li>
+            <li><a href="#">Acompanhar Pedido</a></li>
+          </ul>
+      </nav>
+      <div class="busca">
+          <input type="text" placeholder="Buscar...">
+          <button type="submit"><img src="/recursos/icon-search.png" alt=""> Buscar</button>
+      </div>
+      <div class="header-text">
+        <p>Pagamento na Entrega | Devolução em 30 dias<br>Atendimento ao Cliente 24/7 <strong>(11) 4002-8922</strong></p>
+      </div>
+      <div class="carrinho">
+        <img src="/recursos/icon-car.png" alt="Carrinho de compras">
+      </div>
+    </header>
+    <div class="filtro-carrosel">
+      <div class="filtro">
+        <div class="secao-tamanho">
+          <label for="tamanho">Tamanho:</label>
+          <div>
+            <select id="tamanho">
+              <option value="">Selecione um tamanho</option>
+              <option value="gg">GG</option>
+              <option value="g">G</option>
+              <option value="m">M</option>
+              <option value="p">P</option>
+              <option value="pp">PP</option>
+            </select>
+          </div>
+        </div>
+        <div class="secao-genero">
+          <label for="genero">Gênero:</label>
+          <div>
+            <select id="genero">
+              <option value="">Selecione uma gênero</option>
+              <option value="Masculino">Masculino</option>
+              <option value="feminino">Feminino</option>
+            </select>
+          </div>
+        </div>
+        <div class="secao-anime">
+          <label for="anime">Anime:</label>
+          <div>
+            <select id="anime">
+              <option value="">Selecione um anime</option>
+              <option value="one piece">One Piece</option>
+              <option value="hunter x hunter">Hunter X Hunter</option>
+              <option value="haikyuu">Haikyuu</option>
+              <option value="blue lock">Blue Lock</option>
+            </select>
+          </div>
+        </div>
+        <div class="secao-preco">
+          <label for="preco">Preço:</label>
+          <div class="row text-center">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="De" aria-label="First name">
+            </div>
+            <i class="bi fs-4 bi-currency-dollar"></i>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Para" aria-label="Last name">
+            </div>
+        </div>
+        </div>
+        <button class="filtro-button" type="button"><img src="/recursos/icon-search.png" alt=""> Buscar</button>
+      </div>
+      <div class="carrosel">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="/recursos/one-piece-slide.jpg" alt="Slide de One Piece">
+            </div>
+            <div class="carousel-item">
+              <img src="/recursos/haikyuu-slide.jpg" alt="Slide de Haikyuu">
+            </div>
+            <div class="carousel-item">
+              <img src="/recursos/hxh-slide.jpg" alt="Slide de Hunter x Hunter">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <main>
+        <div class="product-box">
+          <div class="product">
+              <a href="">
+                <img src="/recursos/one-piece1.png">
+                <div class="descriçao">
+                  <p >Camiseta One Piece <br>Cartaz gear 5</p>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <p class="preço">R$49.90</p>
+                </div>
+              </a>
+          </div>
+          <div class="product">
+              <a href="">
+                <img src="/recursos/one-piece2.png">
+                <div class="descriçao">
+                  <p >Camiseta One Piece <br>Silhueta Zoro</p>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <p class="preço">R$49.90</p>
+                </div>
+              </a>
+          </div>
+          <div class="product">
+              <a href="">
+                <img src="/recursos/one-piece3.jpg">
+                <div class="descriçao">
+                  <p >Camiseta One Piece <br>Silhueta Monkey D. Luffy</p>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <p class="preço">R$49.90</p>
+                </div>
+              </a>
+          </div>
+          <div class="product">
+              <a href="">
+                <img src="/recursos/blue-lock1.png">
+                <div class="descriçao">
+                  <p >Camiseta Blue Lock</p>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <p class="preço">R$49.90</p>
+                </div>
+              </a>
+          </div>
+          <div class="product">
+              <a href="">
+                <img src="/recursos/blue-lock2.jpg">
+                <div class="descriçao">
+                  <p >Camiseta Blue Lock</p>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                  <p class="preço">R$49.90</p>
+                </div>
+              </a>
+          </div>
+          <div class="product">
+              <a href="">
+                <img src="/recursos/haikyuu1.jpg">
+                <div class="descriçao">
+                  <p >Camiseta Haikyuu <br>Fly high</p>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <p class="preço">R$49.90</p>
+                </div>
+              </a>
+          </div>
+          <div class="product">
+              <a href="">
+                <img src="/recursos/haikyuu2.jpg">
+                <div class="descriçao">
+                  <p >Camiseta Haikyuu <br>Hinata Fly high</p>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                  <p class="preço">R$49.90</p>
+                </div>
+              </a>
+          </div>
+          <div class="product">
+            <a href="">
+              <img src="/recursos/hxh1.jpg">
+              <div class="descriçao">
+                <p >Camiseta Hunter X Hunter <br>Silhueta Hisoka</p>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <p class="preço">R$49.90</p>
+              </div>
+            </a>
+          </div>
+          <div class="product">
+            <a href="">
+              <img src="/recursos/hxh2.jpg">
+              <div class="descriçao">
+                <p >Camiseta manga longa Hunter X Hunter <br>Gon e Killua</p>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <p class="preço">R$59.90</p>
+              </div>
+            </a>
+          </div>
+        </div>
+          <div class="review-box">
+            <div class="product-container">
+                <h2>Itens mais visitados</h2>
+                <div class="productf">
+                  <a href="">
+                    <img src="/recursos/one-piece2.png">
+                    <div>
+                      <p >Camiseta One Piece <br>Silhueta Zoro</p>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <p class="preço">R$49.90</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="productf">
+                  <a href="">
+                    <img src="/recursos/one-piece3.jpg">
+                    <div>
+                      <p >Camiseta One Piece <br>Silhueta Monkey D. Luffy</p>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star"></i>
+                      <p class="preço">R$49.90</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="productf">
+                  <a href="">
+                    <img src="/recursos/hxh1.jpg">
+                    <div>
+                      <p >Camiseta Hunter X Hunter <br>Silhueta Hisoka</p>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <p class="preço">R$49.90</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="productf">
+                  <a href="">
+                    <img src="/recursos/haikyuu1.jpg">
+                    <div>
+                      <p >Camiseta Haikyuu <br>Fly high</p>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star"></i>
+                      <p class="preço">R$49.90</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="productf">
+                  <a href="">
+                    <img src="/recursos/blue-lock2.jpg">
+                    <div>
+                      <p >Camiseta Blue Lock</p>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                      <p class="preço">R$49.90</p>
+                    </div>
+                  </a>
+                </div>
+                <input type="button" value="Veja mais" class="review-box-button">
+              </div>
+              <div >
+                  <div class="newsletter-box">
+                      <p ><strong>Notícias</strong></p>
+                      <p >Escreva-se para receber notícias e promoções!</p>
+                      <input type="email" class="input-nw">
+                      <input type="button" value="Envie agora!" class="review-box-button">
+                  </div>
+              </div>
+            </div>
+          </div>
+    </main>
+    <footer class="container-fluid bg-secondary-subtle p-3 mt-5 footer-force">
+      <div class="row">
+          <div class="col">
+              <p><strong>Metodos de pagamento</strong></p>
+              <div class="d-flex flex-column metodos-de-pagamento" >
+                  <img src="/recursos/metodos-de-pagamento.webp" alt="Fomas de Pagamento" class="w-75">
+              </div>
+          </div>
+          <div class="col">
+              <p><strong>Links Rapidos</strong></p>
+              <ul class="list-group">
+                  <li class="links-rapidos"><a href="#">Shipping Policy</a></li>
+                  <li class="links-rapidos"><a href="#">Cancelation & Returns</a></li>
+                  <li class="links-rapidos"><a href="#">Help</a></li>
+                  <li class="links-rapidos"><a href="#">FAQ</a></li>
+                  <li class="links-rapidos"><a href="#">Privacy Policy</a></li>
+                  <li class="links-rapidos"><a href="#">Disclamer</a></li>
+              </ul>
+          </div>
+          <div class="col">
+              <p><strong>Redes Sociais</strong></p>
+              <div class="d-flex flex-column redes-sociais">
+                  <a href="https://pt-br.facebook.com/"><i class="bi bi-facebook"></i></a>
+                  <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D"><i class="bi bi-twitter"></i></a>
+                  <a href="https://mail.google.com/mail/?tab=rm&authuser=0&ogbl"><i class="bi bi-google"></i></a>
+              </div>
+          </div>
+          <div class="col">
+              <p><strong>Entre em contato</strong></p>
+              <div class="d-flex">
+                  <i class="bi bi-envelope-fill me-1"></i>
+                  <p class="text-footer me-5">anime.shop@cia.com</p>
+              </div>
+              <div class="d-flex">
+                  <i class="bi bi-telephone-fill me-1"></i>
+                  <p class="fw-bold">(11)4002-8922</p>
+              </div>
+          </div>
+      </div>
+    </footer>
+    <div class="footer-text">
+      <p>© 2023 - 2023 Animeshopcamisetas.com</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
+    </script>
+</body>
+</html>
